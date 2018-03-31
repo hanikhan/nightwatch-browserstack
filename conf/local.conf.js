@@ -1,7 +1,7 @@
 var browserstack = require('browserstack-local');
 
 nightwatch_config = {
-  src_folders : [ "tests/local" ],
+  src_folders : [ "tests/single" ],
 
   selenium : {
     "start_process" : false,
@@ -17,8 +17,8 @@ nightwatch_config = {
         'browserstack.key': process.env.BROWSERSTACK_ACCESS_KEY || 'BROWSERSTACK_ACCESS_KEY',
         'browserstack.debug': true,
         'browserstack.local': true,
-        'browserstack.local': 'myLocalIdentifier',
-        'browser': 'chrome'
+        'browserstack.localIdentifier': 'myLocalIdentifier',
+        'browserName': 'chrome'
       }
     }
   }
